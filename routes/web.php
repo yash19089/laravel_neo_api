@@ -19,4 +19,3 @@ Route::get('/', function () {
 Route::get('getneobydate', 'NeoController@getneobydate');
 Route::post('collectdate', 'NeoController@collectdate');
 Route::get('getapidata', 'NeoController@getapidata');
-// dd('hiy');
