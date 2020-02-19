@@ -84,27 +84,27 @@ class NeoController extends Controller
         //    dd($neo_count_by_date);
         // dd($neo_diameter_km);
         arsort($neo_velocity_kmph);
-        echo "Fastest Asteroid Id & Speed(in KM/Hour)" . "<br>";
+        // echo "Fastest Asteroid Id & Speed(in KM/Hour)" . "<br>";
         $fastestAseroid = Arr::first($neo_velocity_kmph);
         $fastestAseroidkey = array_key_first($neo_velocity_kmph);
         $fastestAseroidId = $neo_by_array[$fastestAseroidkey]['id'];
         // dd($fastestAseroidId);
-        echo $fastestAseroidId . "=" . $fastestAseroid;
-        echo "<br>";
-        echo "Closest Asteroid Id & Distance(in KM)" . "<br>";
+        // echo $fastestAseroidId . "=" . $fastestAseroid;
+        // echo "<br>";
+        // echo "Closest Asteroid Id & Distance(in KM)" . "<br>";
         // dd($neo_distance_km);
         asort($neo_distance_km);
         $closestAseroid = Arr::first($neo_distance_km);
         $closestAseroidkey = array_key_first($neo_velocity_kmph);
         $closestAseroidId = $neo_by_array[$closestAseroidkey]['id'];
-        echo $closestAseroidId . "=" . $closestAseroid;
+        // echo $closestAseroidId . "=" . $closestAseroid;
 
         $neo_count_by_date_arry_keys = array_keys($neo_count_by_date);
         $neo_count_by_date_arry_values = array_values($neo_count_by_date);
         // var_dump($fastestAseroidkey);
         // $data = json_encode($neo_count_by_date);
         // return view('barchart', compact('neo_count_by_date'));
-        return view('barchart', compact('neo_count_by_date_arry_keys', 'neo_count_by_date_arry_values'));
+        return view('barchart', compact('fastestAseroidId', 'fastestAseroid', 'closestAseroidId', 'closestAseroid', 'neo_count_by_date_arry_keys', 'neo_count_by_date_arry_values'));
 
         // print_r($neo_by_date);
     }

@@ -15,7 +15,10 @@
 
 <body>
     <br><br>
-
+    Fastest Asteroid Id & Speed(in KM/Hour) <br>
+    {{$fastestAseroidId . "=" . $fastestAseroid}} <br>
+    Closest Asteroid Id & Distance(in KM) <br>
+    {{$closestAseroidId . "=" . $closestAseroid}} <br>
     <br><br>
     <div style="width: 700px;height: 700px;" class="ml-5">
         <canvas id="myChart" width="400" height="400" style="border: solid;color: red;"></canvas>
